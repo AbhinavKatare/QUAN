@@ -1,0 +1,31 @@
+PS C:\Users\vit> & C:/Users/vit/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/vit/Desktop/qwen Nit/qwenenvironment/download_qwen.py"
+Traceback (most recent call last):
+  File "C:\Users\vit\AppData\Local\Programs\Python\Python313\Lib\importlib\metadata\__init__.py", line 407, in from_name
+    return next(iter(cls.discover(name=name)))
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\vit\Desktop\qwen Nit\qwenenvironment\download_qwen.py", line 7, in <module>
+    quantization_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+    ...<2 lines>...
+        bnb_4bit_compute_dtype=torch.bfloat16
+    )
+  File "C:\Users\vit\AppData\Local\Programs\Python\Python313\Lib\site-packages\transformers\utils\quantization_config.py", line 510, in __init__ 
+    self.post_init()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\vit\AppData\Local\Programs\Python\Python313\Lib\site-packages\transformers\utils\quantization_config.py", line 568, in post_init
+    if self.load_in_4bit and not version.parse(importlib.metadata.version("bitsandbytes")) >= version.parse(
+                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\vit\AppData\Local\Programs\Python\Python313\Lib\importlib\metadata\__init__.py", line 987, in version
+    return distribution(distribution_name).version
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vit\AppData\Local\Programs\Python\Python313\Lib\importlib\metadata\__init__.py", line 960, in distribution
+    return Distribution.from_name(distribution_name)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vit\AppData\Local\Programs\Python\Python313\Lib\importlib\metadata\__init__.py", line 409, in from_name
+    raise PackageNotFoundError(name)
+importlib.metadata.PackageNotFoundError: No package metadata was found for bitsandbytes
+PS C:\Users\vit> 
